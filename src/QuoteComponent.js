@@ -14,6 +14,7 @@ function processQuote(quote) {
 
 function QuoteComponent() {
   const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState('');
 
   useEffect(() => {
     fetch('https://dummyjson.com/quotes/random')
@@ -21,6 +22,7 @@ function QuoteComponent() {
       .then(data => {
         const processedQuote = processQuote(data.quote);
         setQuote(processedQuote);
+        setAuthor(data.author);
       })
       .catch(error => console.error('Error fetching quote:', error));
   }, []); // empty array = run once on mount
@@ -30,6 +32,11 @@ function QuoteComponent() {
       <p className="quote-text">
         {quote}
       </p>
+      {author && (
+        <p className="quote-author">
+          — {author}
+        </p>
+      )}
     </div>
   );
 }
