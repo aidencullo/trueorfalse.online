@@ -22,7 +22,7 @@ function QuoteComponent() {
   return (
     <div className="quote-container">
       <p className="quote-text">
-        {statement}
+        {statement ? statement : 'Loading...'}
       </p>
     </div>
   );
