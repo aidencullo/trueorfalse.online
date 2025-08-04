@@ -1,5 +1,14 @@
 import { useEffect, useState } from 'react';
 
+const Error = () => {
+  return (
+    <div style={{ color: 'red', fontSize: '20px', fontWeight: 'bold' }}>
+      <p>Something went wrong. Please try again later.</p>
+    </div>
+  );
+};
+
+
 function decodeHtmlEntities(text) {
   const textarea = document.createElement('textarea');
   textarea.innerHTML = text;
@@ -22,7 +31,7 @@ function QuoteComponent() {
   return (
     <div className="quote-container">
       <p className="quote-text">
-        {statement ? statement : 'Loading...'}
+        {statement ? statement : <Error />}
       </p>
     </div>
   );
