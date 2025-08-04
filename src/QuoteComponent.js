@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 
+function decodeHtmlEntities(text) {
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 function QuoteComponent() {
   const [statement, setStatement] = useState('');
 
@@ -7,7 +13,8 @@ function QuoteComponent() {
     fetch('https://opentdb.com/api.php?amount=1&type=boolean')
       .then(response => response.json())
       .then(data => {
-        setStatement(data.results[0].question);
+        const decodedStatement = decodeHtmlEntities(data.results[0].question);
+        setStatement(decodedStatement);
       })
       .catch(error => console.error('Error fetching statement:', error));
   }, []); // empty array = run once on mount
