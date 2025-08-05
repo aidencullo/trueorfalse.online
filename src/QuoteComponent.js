@@ -30,10 +30,12 @@ function QuoteComponent() {
   };
 
   return (
-    <div className="quote-container">
-      <p className="quote-text">
-        { (error || statement) ? (error || statement) : "Loading..."}
-      </p>
+    <div>
+      <div className="quote-container">
+        <p className="quote-text">
+          { (error || statement) ? (error || statement) : "Loading..."}
+        </p>
+      </div>
       <div className="button-container">
         <button className="true-button" onClick={handleTrueClick}>
           True
