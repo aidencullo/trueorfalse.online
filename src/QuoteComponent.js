@@ -1,12 +1,12 @@
 import React from 'react';
 import ButtonContainer from './ButtonContainer';
 
-function QuoteText({ message }) {
+function QuoteComponent({ text }) {
   return (
     <div>
       <div className="quote-container">
         <p className="quote-text">
-          {message}
+          {text}
         </p>
       </div>
       <ButtonContainer />
@@ -14,4 +14,4 @@ function QuoteText({ message }) {
   );
 }
 
-export default QuoteText; 
+export default QuoteComponent; 

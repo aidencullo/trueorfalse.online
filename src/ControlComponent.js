@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import QuoteText from './QuoteText';
+import QuoteComponent from './QuoteComponent';
 import LoadingComponent from './LoadingComponent';
 import ErrorComponent from './ErrorComponent';
 import { statementReducer, initialState } from './reducers/statementReducer';
@@ -30,7 +30,7 @@ function ControlComponent() {
       case 'error':
         return <ErrorComponent />;
       case 'quote':
-        return <QuoteText message={state.message} />;
+        return <QuoteComponent text={state.message} />;
       default:
         return <LoadingComponent />;
     }
