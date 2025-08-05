@@ -13,7 +13,7 @@ async function fetchStatement(dispatch) {
     const decodedStatement = decodeHtmlEntities(data.results[0].question);
     dispatch({ type: 'SET_STATEMENT', payload: decodedStatement });
   } catch (error) {
-    dispatch({ type: 'SET_ERROR', payload: "Something went wrong. Please try again later." });
+    dispatch({ type: 'SET_ERROR' });
   }
 }
 

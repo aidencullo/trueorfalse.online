@@ -9,7 +9,7 @@ export function statementReducer(state, action) {
     case 'SET_STATEMENT':
       return { message: action.payload };
     case 'SET_ERROR':
-      return { message: action.payload };
+      return { message: 'Something went wrong. Please try again later.' };
     default:
       return state;
   }
