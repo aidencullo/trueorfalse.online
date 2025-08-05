@@ -1,3 +1,5 @@
+import VisitCounter from './VisitCounter';
+
 function Header() {
   return (
     <header className="header">
@@ -5,6 +7,7 @@ function Header() {
         <div className="logo-container">
           <img src="/favicon.ico" alt="Favicon" style={{ width: '24px', height: '24px' }} />
         </div>
+        <VisitCounter />
       </div>
     </header>
   );
