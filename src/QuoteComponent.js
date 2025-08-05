@@ -15,8 +15,8 @@ function QuoteComponent({ text, answer }) {
   return (
     <div>
       <QuoteDisplay text={text} />
-      <ButtonContainer onAnswer={onAnswer} />
-      <SolutionComponent userAnswer={userAnswer} correctAnswer={answer} />
+      {userAnswer === null && <ButtonContainer onAnswer={onAnswer} />}
+      {userAnswer !== null && <SolutionComponent userAnswer={userAnswer} correctAnswer={answer} />}
     </div>
   );
 }
