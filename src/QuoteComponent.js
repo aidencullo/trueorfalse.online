@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react';
 import TrueButton from './TrueButton';
 import FalseButton from './FalseButton';
+import { decodeHtmlEntities } from './utils/htmlUtils';
 
 const initialState = {
   message: 'Loading...'
@@ -19,34 +20,25 @@ function reducer(state, action) {
   }
 }
 
-function decodeHtmlEntities(text) {
-  const textarea = document.createElement('textarea');
-  textarea.innerHTML = text;
-  return textarea.value;
+async function fetchStatement(dispatch) {
+  dispatch({ type: 'SET_LOADING' });
+  
+  try {
+    const response = await fetch('https://opentdb.com/api.php?amount=1&type=boolean');
+    const data = await response.json();
+    const decodedStatement = decodeHtmlEntities(data.results[0].question);
+    dispatch({ type: 'SET_STATEMENT', payload: decodedStatement });
+  } catch (error) {
+    dispatch({ type: 'SET_ERROR', payload: "Something went wrong. Please try again later." });
+  }
 }
 
 function QuoteComponent() {
   const [state, dispatch] = useReducer(reducer, initialState);
   
   useEffect(() => {
-    dispatch({ type: 'SET_LOADING' });
-    
-    fetch('https://opentdb.com/api.php?amount=1&type=boolean')
-      .then(response => response.json())
-      .then(data => {
-        const decodedStatement = decodeHtmlEntities(data.results[0].question);
-        dispatch({ type: 'SET_STATEMENT', payload: decodedStatement });
-      })
-      .catch(error => dispatch({ type: 'SET_ERROR', payload: "Something went wrong. Please try again later." }));
+    fetchStatement(dispatch);
   }, []);
-
-  const handleTrueClick = () => {
-    console.log('True clicked');
-  };
-
-  const handleFalseClick = () => {
-    console.log('False clicked');
-  };
 
   return (
     <div>
@@ -56,8 +48,8 @@ function QuoteComponent() {
         </p>
       </div>
       <div className="button-container">
-        <TrueButton onClick={handleTrueClick} />
-        <FalseButton onClick={handleFalseClick} />
+        <TrueButton />
+        <FalseButton />
       </div>
     </div>
   );

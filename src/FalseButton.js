@@ -3,7 +3,7 @@ import Button from './Button';
 
 function FalseButton({ onClick }) {
   return (
-    <Button className="false-button" onClick={onClick}>
+    <Button className="false-button" onClick={onClick || (() => {})}>
       False
     </Button>
   );
