@@ -1,17 +1,15 @@
 import { useEffect, useReducer } from 'react';
 import QuoteText from './QuoteText';
 import ButtonContainer from './ButtonContainer';
-import { decodeHtmlEntities } from './utils/htmlUtils';
 import { statementReducer, initialState } from './reducers/statementReducer';
+import { fetchStatement } from './services/apiService';
 
-async function fetchStatement(dispatch) {
+async function handleFetchStatement(dispatch) {
   dispatch({ type: 'SET_LOADING' });
   
   try {
-    const response = await fetch('https://opentdb.com/api.php?amount=1&type=boolean');
-    const data = await response.json();
-    const decodedStatement = decodeHtmlEntities(data.results[0].question);
-    dispatch({ type: 'SET_STATEMENT', payload: decodedStatement });
+    const statement = await fetchStatement();
+    dispatch({ type: 'SET_STATEMENT', payload: statement });
   } catch (error) {
     dispatch({ type: 'SET_ERROR' });
   }
@@ -21,7 +19,7 @@ function QuoteComponent() {
   const [state, dispatch] = useReducer(statementReducer, initialState);
   
   useEffect(() => {
-    fetchStatement(dispatch);
+    handleFetchStatement(dispatch);
   }, []);
 
   return (
