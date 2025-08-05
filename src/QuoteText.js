@@ -1,11 +1,15 @@
 import React from 'react';
+import ButtonContainer from './ButtonContainer';
 
 function QuoteText({ message }) {
   return (
-    <div className="quote-container">
-      <p className="quote-text">
-        {message}
-      </p>
+    <div>
+      <div className="quote-container">
+        <p className="quote-text">
+          {message}
+        </p>
+      </div>
+      <ButtonContainer />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import './App.css';
 import './styles.css';
 
 import Header from './Header';
-import QuoteComponent from './QuoteComponent';
+import ControlComponent from './ControlComponent';
 import Footer from './Footer';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="main-content">
-        <QuoteComponent />
+        <ControlComponent />
       </div>
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react';
 import QuoteText from './QuoteText';
-import ButtonContainer from './ButtonContainer';
+import LoadingComponent from './LoadingComponent';
+import ErrorComponent from './ErrorComponent';
 import { statementReducer, initialState } from './reducers/statementReducer';
 import { fetchStatement } from './services/apiService';
 
@@ -15,19 +16,31 @@ async function handleFetchStatement(dispatch) {
   }
 }
 
-function QuoteComponent() {
+function ControlComponent() {
   const [state, dispatch] = useReducer(statementReducer, initialState);
   
   useEffect(() => {
     handleFetchStatement(dispatch);
   }, []);
 
+  const renderComponent = () => {
+    switch (state.component) {
+      case 'loading':
+        return <LoadingComponent />;
+      case 'error':
+        return <ErrorComponent />;
+      case 'quote':
+        return <QuoteText message={state.message} />;
+      default:
+        return <LoadingComponent />;
+    }
+  };
+
   return (
     <div>
-      <QuoteText message={state.message} />
-      <ButtonContainer />
+      {renderComponent()}
     </div>
   );
 }
 
-export default QuoteComponent; 
+export default ControlComponent; 

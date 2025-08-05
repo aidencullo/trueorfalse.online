@@ -1,15 +1,15 @@
 export const initialState = {
-  message: 'Loading...'
+  component: 'loading'
 };
 
 export function statementReducer(state, action) {
   switch (action.type) {
     case 'SET_LOADING':
-      return { message: 'Loading...' };
+      return { component: 'loading' };
     case 'SET_STATEMENT':
-      return { message: action.payload };
+      return { component: 'quote', message: action.payload };
     case 'SET_ERROR':
-      return { message: 'Something went wrong. Please try again later.' };
+      return { component: 'error' };
     default:
       return state;
   }
