@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from './Button';
 
-function FalseButton({ onClick }) {
+function FalseButton({ onAnswer }) {
   return (
-    <Button className="false-button" onClick={onClick || (() => {})}>
+    <Button className="false-button" onClick={() => onAnswer(false)}>
       False
     </Button>
   );

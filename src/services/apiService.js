@@ -16,6 +16,6 @@ export async function fetchStatement() {
   const response = await fetch(url);
   const data = await response.json();
   const decodedStatement = decodeHtmlEntities(data.results[0].question);
-  const answer = data.results[0].correct_answer;
+  const answer = data.results[0].correct_answer === 'True';
   return { statement: decodedStatement, answer };
 } 

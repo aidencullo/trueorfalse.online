@@ -2,11 +2,11 @@ import React from 'react';
 import TrueButton from './TrueButton';
 import FalseButton from './FalseButton';
 
-function ButtonContainer({ answer }) {
+function ButtonContainer({ onAnswer }) {
   return (
     <div className="button-container">
-      <TrueButton answer={answer} />
-      <FalseButton answer={answer} />
+      <TrueButton onAnswer={onAnswer} />
+      <FalseButton onAnswer={onAnswer} />
     </div>
   );
 }
