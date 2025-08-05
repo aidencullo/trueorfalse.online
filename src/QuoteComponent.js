@@ -1,24 +1,8 @@
 import { useEffect, useReducer } from 'react';
-import TrueButton from './TrueButton';
-import FalseButton from './FalseButton';
+import QuoteText from './QuoteText';
+import ButtonContainer from './ButtonContainer';
 import { decodeHtmlEntities } from './utils/htmlUtils';
-
-const initialState = {
-  message: 'Loading...'
-};
-
-function reducer(state, action) {
-  switch (action.type) {
-    case 'SET_LOADING':
-      return { message: 'Loading...' };
-    case 'SET_STATEMENT':
-      return { message: action.payload };
-    case 'SET_ERROR':
-      return { message: action.payload };
-    default:
-      return state;
-  }
-}
+import { statementReducer, initialState } from './reducers/statementReducer';
 
 async function fetchStatement(dispatch) {
   dispatch({ type: 'SET_LOADING' });
@@ -34,7 +18,7 @@ async function fetchStatement(dispatch) {
 }
 
 function QuoteComponent() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(statementReducer, initialState);
   
   useEffect(() => {
     fetchStatement(dispatch);
@@ -42,15 +26,8 @@ function QuoteComponent() {
 
   return (
     <div>
-      <div className="quote-container">
-        <p className="quote-text">
-          {state.message}
-        </p>
-      </div>
-      <div className="button-container">
-        <TrueButton />
-        <FalseButton />
-      </div>
+      <QuoteText message={state.message} />
+      <ButtonContainer />
     </div>
   );
 }
