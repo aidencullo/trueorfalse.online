@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     initializeUserData();
-  }, []);
+  }, [initializeUserData]);
 
   useEffect(() => {
     saveVisitsToStorage(state.siteVisits);
