@@ -1,4 +1,5 @@
 import VisitCounter from './VisitCounter';
+import CorrectCounter from './CorrectCounter';
 
 function Header() {
   return (
@@ -7,7 +8,10 @@ function Header() {
         <div className="logo-container">
           <img src="/favicon.ico" alt="Favicon" style={{ width: '24px', height: '24px' }} />
         </div>
-        <VisitCounter />
+        <div className="counters-container">
+          <VisitCounter />
+          <CorrectCounter />
+        </div>
       </div>
     </header>
   );

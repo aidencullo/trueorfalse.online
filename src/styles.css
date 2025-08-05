@@ -45,6 +45,13 @@
   color: white;
 }
 
+/* Counters container styles */
+.counters-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 /* Footer styles */
 .footer {
   position: fixed;
@@ -78,6 +85,21 @@
 }
 
 .visit-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+/* Correct counter styles */
+.correct-counter {
+  padding: 0.5rem 1rem;
+  background-color: rgba(39, 174, 96, 0.2);
+  border: 1px solid rgba(39, 174, 96, 0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+}
+
+.correct-text {
   font-size: 0.9rem;
   font-weight: 500;
   color: white;
