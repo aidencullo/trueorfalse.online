@@ -1,4 +1,6 @@
 import { useEffect, useReducer } from 'react';
+import TrueButton from './TrueButton';
+import FalseButton from './FalseButton';
 
 const initialState = {
   message: 'Loading...'
@@ -54,12 +56,8 @@ function QuoteComponent() {
         </p>
       </div>
       <div className="button-container">
-        <button className="true-button" onClick={handleTrueClick}>
-          True
-        </button>
-        <button className="false-button" onClick={handleFalseClick}>
-          False
-        </button>
+        <TrueButton onClick={handleTrueClick} />
+        <FalseButton onClick={handleFalseClick} />
       </div>
     </div>
   );
