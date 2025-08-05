@@ -19,13 +19,29 @@ function QuoteComponent() {
         setStatement(decodedStatement);
       })
       .catch(error => setError("Something went wrong. Please try again later."));
-  }, []); // empty array = run once on mount
+  }, []);
+
+  const handleTrueClick = () => {
+    console.log('True clicked');
+  };
+
+  const handleFalseClick = () => {
+    console.log('False clicked');
+  };
 
   return (
     <div className="quote-container">
       <p className="quote-text">
         { (error || statement) ? (error || statement) : "Loading..."}
       </p>
+      <div className="button-container">
+        <button className="true-button" onClick={handleTrueClick}>
+          True
+        </button>
+        <button className="false-button" onClick={handleFalseClick}>
+          False
+        </button>
+      </div>
     </div>
   );
 }
