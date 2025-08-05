@@ -9,8 +9,8 @@ async function handleFetchStatement(dispatch) {
   dispatch({ type: 'SET_LOADING' });
   
   try {
-    const statement = await fetchStatement();
-    dispatch({ type: 'SET_STATEMENT', payload: statement });
+    const data = await fetchStatement();
+    dispatch({ type: 'SET_STATEMENT', payload: data });
   } catch (error) {
     dispatch({ type: 'SET_ERROR' });
   }
@@ -30,7 +30,7 @@ function ControlComponent() {
       case 'error':
         return <ErrorComponent />;
       case 'quote':
-        return <QuoteComponent text={state.message} />;
+        return <QuoteComponent text={state.statement} answer={state.answer} />;
       default:
         return <LoadingComponent />;
     }

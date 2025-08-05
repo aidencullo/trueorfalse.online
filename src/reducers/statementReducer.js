@@ -7,7 +7,11 @@ export function statementReducer(state, action) {
     case 'SET_LOADING':
       return { component: 'loading' };
     case 'SET_STATEMENT':
-      return { component: 'quote', message: action.payload };
+      return { 
+        component: 'quote', 
+        statement: action.payload.statement,
+        answer: action.payload.answer
+      };
     case 'SET_ERROR':
       return { component: 'error' };
     default:

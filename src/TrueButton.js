@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from './Button';
 
-function TrueButton({ onClick }) {
+function TrueButton({ answer }) {
   return (
-    <Button className="true-button" onClick={onClick || (() => {})}>
+    <Button className="true-button" onClick={() => {}}>
       True
     </Button>
   );
