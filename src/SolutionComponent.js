@@ -8,7 +8,10 @@ function SolutionComponent({ userAnswer, correctAnswer }) {
   useEffect(() => {
     if (userAnswer !== null && userAnswer === correctAnswer) {
       dispatch({ type: 'INCREMENT_CORRECT' });
+    } else if (userAnswer !== null && userAnswer !== correctAnswer) {
+      dispatch({ type: 'INCREMENT_INCORRECT' });
     }
+
   }, [userAnswer, correctAnswer, dispatch]);
 
   if (userAnswer === null) {

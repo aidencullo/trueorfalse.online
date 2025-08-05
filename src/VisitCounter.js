@@ -5,9 +5,13 @@ function VisitCounter() {
   const { state } = useAppContext();
 
   return (
-    <div className="visit-counter">
-      <span className="visit-text">Visits: {state.siteVisits}</span>
-    </div>
+    <>
+    {state.siteVisits >= 0 && (
+      <div className="visit-counter">
+        <span className="visit-text">Visits: {state.siteVisits}</span>
+      </div>
+    )}
+    </>
   );
 }
 

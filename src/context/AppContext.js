@@ -1,8 +1,9 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
 const initialState = {
-  siteVisits: 0,
-  correct: 0
+  siteVisits: -1,
+  correct: -1,
+  incorrect: -1
 };
 
 function userReducer(state, action) {
@@ -21,11 +22,21 @@ function userReducer(state, action) {
       return {
         ...state,
         correct: state.correct + 1
-      };
+      };  
     case 'SET_CORRECT':
       return {
         ...state,
         correct: action.payload
+      };
+    case 'INCREMENT_INCORRECT':
+      return {
+        ...state,
+        incorrect: state.incorrect + 1
+      };
+    case 'SET_INCORRECT':
+      return {
+        ...state,
+        incorrect: action.payload
       };
     default:
       return state;

@@ -1,5 +1,6 @@
 import VisitCounter from './VisitCounter';
 import CorrectCounter from './CorrectCounter';
+import IncorrectCounter from './IncorrectCounter';
 
 function Header() {
   return (
@@ -11,6 +12,7 @@ function Header() {
         <div className="counters-container">
           <VisitCounter />
           <CorrectCounter />
+          <IncorrectCounter />
         </div>
       </div>
     </header>
