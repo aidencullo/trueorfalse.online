@@ -1,40 +1,28 @@
 import './App.css';
 import './styles.css';
 import { useEffect } from 'react';
-
-import Header from './Header';
-import ControlComponent from './ControlComponent';
-import Footer from './Footer';
+import Body from './Body';
 import { useAppContext } from './context/AppContext';
-
+import { getStoredVisits, saveVisitsToStorage } from './utils/storageUtils';
 
 function App() {
   const { state, dispatch } = useAppContext();
 
-  useEffect(() => {
-    const visits = Number(localStorage.getItem('visits'));
-    console.log('visits', visits);
-    if (visits) {
-      dispatch({ type: 'SET_VISITS', payload: visits });
-    } else {
-      dispatch({ type: 'SET_VISITS', payload: 0 });
-    }
+  const initializeVisits = () => {
+    const storedVisits = getStoredVisits();
+    dispatch({ type: 'SET_VISITS', payload: storedVisits });
     dispatch({ type: 'INCREMENT_VISITS' });
+  };
+
+  useEffect(() => {
+    initializeVisits();
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('visits', state.siteVisits);
+    saveVisitsToStorage(state.siteVisits);
   }, [state.siteVisits]);
 
-  return (
-    <div className="App">
-      <Header />
-      <div className="main-content">
-        <ControlComponent />
-      </div>
-      <Footer />
-    </div>
-  );
+  return <Body />;
 }
 
 export default App;
