@@ -112,30 +112,30 @@
   font-size: 1rem;
   font-weight: 600;
   color: white;
-  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
   position: relative;
   overflow: hidden;
 }
 
 .fetch-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.4);
-  background: linear-gradient(135deg, #229954 0%, #27ae60 100%);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+  background: linear-gradient(135deg, #2980b9 0%, #1f5f8b 100%);
 }
 
 .fetch-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
 }
 
 .fetch-button:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
 /* Quote container styles */
