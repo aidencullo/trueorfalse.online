@@ -8,7 +8,6 @@ import { getStoredVisits, saveVisitsToStorage, getStoredCorrect, saveCorrectToSt
 function App() {
   // Test comment for pre-commit hook
   const { state, dispatch } = useAppContext();
-  const unusedVariable = 'This is a test comment';
 
   const initializeUserData = useCallback(() => {
     const storedVisits = getStoredVisits();
