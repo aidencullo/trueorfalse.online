@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AppProvider } from './context/AppContext';
+import { StatementProvider } from './context/StatementContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
     <AppProvider>
-      <App />
+      <StatementProvider>
+        <App />
+      </StatementProvider>
     </AppProvider>
   // </React.StrictMode>
 );

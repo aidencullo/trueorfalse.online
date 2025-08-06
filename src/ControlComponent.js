@@ -1,16 +1,16 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect } from 'react';
 import QuoteComponent from './QuoteComponent';
 import LoadingComponent from './LoadingComponent';
 import ErrorComponent from './ErrorComponent';
-import { statementReducer, initialState } from './reducers/statementReducer';
+import { useStatementContext } from './context/StatementContext';
 import { handleFetchStatement } from './utils/statementUtils';
 
 function ControlComponent() {
-  const [state, dispatch] = useReducer(statementReducer, initialState);
+  const { state, dispatch } = useStatementContext();
   
   useEffect(() => {
     handleFetchStatement(dispatch);
-  }, []);
+  }, [dispatch]);
 
   const renderComponent = () => {
     switch (state.component) {
@@ -19,7 +19,7 @@ function ControlComponent() {
       case 'error':
         return <ErrorComponent onFetchStatement={() => handleFetchStatement(dispatch)} />;
       case 'quote':
-        return <QuoteComponent text={state.statement} answer={state.answer} onFetch={() => handleFetchStatement(dispatch)} />;
+        return <QuoteComponent text={state.statement} answer={state.answer} />;
       default:
         return <LoadingComponent />;
     }
