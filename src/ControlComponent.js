@@ -39,6 +39,12 @@ function ControlComponent() {
   return (
     <div>
       {renderComponent()}
+      <button 
+        className="fetch-button" 
+        onClick={() => handleFetchStatement(dispatch)}
+      >
+        Fetch Statement
+      </button>
     </div>
   );
 }

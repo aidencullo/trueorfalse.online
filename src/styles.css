@@ -105,19 +105,37 @@
   color: white;
 }
 
-/* Incorrect counter styles */
-.incorrect-counter {
-  padding: 0.5rem 1rem;
-  background-color: rgba(231, 76, 60, 0.2);
-  border: 1px solid rgba(231, 76, 60, 0.3);
-  border-radius: 6px;
-  backdrop-filter: blur(10px);
+/* Fetch button styles */
+.fetch-button {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-.incorrect-text {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: white;
+.fetch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(39, 174, 96, 0.4);
+  background: linear-gradient(135deg, #229954 0%, #27ae60 100%);
+}
+
+.fetch-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(39, 174, 96, 0.3);
+}
+
+.fetch-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.3);
 }
 
 /* Quote container styles */
