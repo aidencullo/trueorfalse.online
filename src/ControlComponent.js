@@ -19,7 +19,7 @@ function ControlComponent() {
       case 'error':
         return <ErrorComponent onFetchStatement={() => handleFetchStatement(dispatch)} />;
       case 'quote':
-        return <QuoteComponent text={state.statement} answer={state.answer} />;
+        return <QuoteComponent text={state.statements[0]} answer={state.answers[0]} />;
       default:
         return <LoadingComponent />;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStatementContext } from '../context/StatementContext';
-import { handleFetchStatement } from '../utils/statementUtils';
+import { fetchAnotherStatement } from '../utils/statementUtils';
 
 function FetchButton({ userAnswer }) {
   const { dispatch } = useStatementContext();
@@ -10,7 +10,7 @@ function FetchButton({ userAnswer }) {
   }
 
   const handleClick = () => {
-    handleFetchStatement(dispatch);
+    fetchAnotherStatement(dispatch);
   };
 
   return (
