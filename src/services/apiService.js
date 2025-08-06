@@ -1,10 +1,10 @@
 import { decodeHtmlEntities } from '../utils/htmlUtils';
 
-function buildApiUrl() {
+function buildApiUrl(amount = 1) {
   const host = 'https://opentdb.com';
   const endpoint = '/api.php';
   const params = new URLSearchParams({
-    amount: '1',
+    amount: amount.toString(),
     type: 'boolean'
   });
   
@@ -18,4 +18,15 @@ export async function fetchStatement() {
   const decodedStatement = decodeHtmlEntities(data.results[0].question);
   const answer = data.results[0].correct_answer === 'True';
   return { statement: decodedStatement, answer };
+}
+
+export async function fetchMultipleStatements(amount = 10) {
+  const url = buildApiUrl(amount);
+  const response = await fetch(url);
+  const data = await response.json();
+  
+  return data.results.map(result => ({
+    statement: decodeHtmlEntities(result.question),
+    answer: result.correct_answer === 'True'
+  }));
 } 

@@ -1,11 +1,11 @@
-import { fetchStatement } from '../services/apiService';
+import { fetchMultipleStatements } from '../services/apiService';
 
 export async function handleFetchStatement(dispatch) {
   dispatch({ type: 'SET_LOADING' });
   
   try {
-    const data = await fetchStatement();
-    dispatch({ type: 'SET_STATEMENT', payload: data });
+    const statements = await fetchMultipleStatements(10);
+    dispatch({ type: 'SET_MULTIPLE_STATEMENTS', payload: statements });
   } catch (error) {
     dispatch({ type: 'SET_ERROR' });
   }
@@ -18,8 +18,8 @@ export async function fetchAnotherStatement(dispatch, currentStatements) {
     dispatch({ type: 'SET_LOADING' });
     
     try {
-      const data = await fetchStatement();
-      dispatch({ type: 'FETCH_ANOTHER_STATEMENT', payload: data });
+      const statements = await fetchMultipleStatements(10);
+      dispatch({ type: 'SET_MULTIPLE_STATEMENTS', payload: statements });
     } catch (error) {
       dispatch({ type: 'SET_ERROR' });
     }

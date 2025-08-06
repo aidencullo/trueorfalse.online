@@ -14,6 +14,12 @@ export function statementReducer(state, action) {
         statements: [...state.statements, action.payload.statement],
         answers: [...state.answers, action.payload.answer]
       };
+    case 'SET_MULTIPLE_STATEMENTS':
+      return { 
+        component: 'quote', 
+        statements: [...state.statements, ...action.payload.map(s => s.statement)],
+        answers: [...state.answers, ...action.payload.map(s => s.answer)]
+      };
     case 'FETCH_ANOTHER_STATEMENT':
       return { 
         component: 'quote', 
