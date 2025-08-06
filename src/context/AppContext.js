@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useReducer } from 'react';
 
 const initialState = {
-  siteVisits: -1,
-  correct: -1,
-  incorrect: -1
+  siteVisits: 0,
+  correct: 0,
+  incorrect: 0
 };
 
 function userReducer(state, action) {
