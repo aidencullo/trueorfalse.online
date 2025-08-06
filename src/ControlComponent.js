@@ -3,18 +3,7 @@ import QuoteComponent from './QuoteComponent';
 import LoadingComponent from './LoadingComponent';
 import ErrorComponent from './ErrorComponent';
 import { statementReducer, initialState } from './reducers/statementReducer';
-import { fetchStatement } from './services/apiService';
-
-async function handleFetchStatement(dispatch) {
-  dispatch({ type: 'SET_LOADING' });
-  
-  try {
-    const data = await fetchStatement();
-    dispatch({ type: 'SET_STATEMENT', payload: data });
-  } catch (error) {
-    dispatch({ type: 'SET_ERROR' });
-  }
-}
+import { handleFetchStatement } from './utils/statementUtils';
 
 function ControlComponent() {
   const [state, dispatch] = useReducer(statementReducer, initialState);
