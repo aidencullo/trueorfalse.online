@@ -18,7 +18,7 @@ function QuoteComponent({ text, answer, onFetch }) {
       <QuoteDisplay text={text} />
       <ButtonContainer onAnswer={onAnswer} userAnswer={userAnswer} />
       <SolutionComponent userAnswer={userAnswer} correctAnswer={answer} />
-      <FetchButton onFetch={onFetch} />
+      <FetchButton onFetch={onFetch} userAnswer={userAnswer} />
     </div>
   );
 }

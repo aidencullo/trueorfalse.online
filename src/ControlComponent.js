@@ -17,7 +17,7 @@ function ControlComponent() {
       case 'loading':
         return <LoadingComponent />;
       case 'error':
-        return <ErrorComponent />;
+        return <ErrorComponent onFetchStatement={() => handleFetchStatement(dispatch)} />;
       case 'quote':
         return <QuoteComponent text={state.statement} answer={state.answer} onFetch={() => handleFetchStatement(dispatch)} />;
       default:
