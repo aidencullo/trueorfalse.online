@@ -1,7 +1,8 @@
 export const initialState = {
   siteVisits: 0,
   correct: 0,
-  incorrect: 0
+  incorrect: 0,
+  loading: true
 };
 
 export function userReducer(state, action) {
@@ -35,6 +36,11 @@ export function userReducer(state, action) {
       return {
         ...state,
         incorrect: action.payload
+      };
+    case 'SET_LOADING':
+      return {
+        ...state,
+        loading: action.payload
       };
     default:
       return state;

@@ -18,6 +18,7 @@ function App() {
     dispatch({ type: 'SET_CORRECT', payload: storedCorrect });
     dispatch({ type: 'SET_INCORRECT', payload: storedIncorrect });
     dispatch({ type: 'INCREMENT_VISITS' });
+    dispatch({ type: 'SET_LOADING', payload: false });
   }, [dispatch]);
 
   useEffect(() => {
@@ -26,15 +27,9 @@ function App() {
 
   useEffect(() => {
     saveVisitsToStorage(state.siteVisits);
-  }, [state.siteVisits]);
-
-  useEffect(() => {
     saveCorrectToStorage(state.correct);
-  }, [state.correct]);
-
-  useEffect(() => {
     saveIncorrectToStorage(state.incorrect);
-  }, [state.incorrect]);
+  }, [state.siteVisits, state.correct, state.incorrect]);
 
   return <Body />;
 }
