@@ -6,7 +6,6 @@ import { useAppContext } from './context/AppContext';
 import { getStoredVisits, saveVisitsToStorage, getStoredCorrect, saveCorrectToStorage, getStoredIncorrect, saveIncorrectToStorage } from './utils/storageUtils';
 
 function App() {
-  console.log('in App');
   const { state, dispatch } = useAppContext();
 
   const initializeUserData = useCallback(() => {
