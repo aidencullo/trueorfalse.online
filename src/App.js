@@ -1,14 +1,15 @@
 import './App.css';
 import './styles.css';
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import Body from './Body';
 import { useAppContext } from './context/AppContext';
 import { getStoredVisits, saveVisitsToStorage, getStoredCorrect, saveCorrectToStorage, getStoredIncorrect, saveIncorrectToStorage } from './utils/storageUtils';
 
 function App() {
+  console.log('in App');
   const { state, dispatch } = useAppContext();
 
-  const initializeUserData = () => {
+  const initializeUserData = useCallback(() => {
     const storedVisits = getStoredVisits();
     const storedCorrect = getStoredCorrect();
     const storedIncorrect = getStoredIncorrect();
@@ -17,7 +18,7 @@ function App() {
     dispatch({ type: 'SET_CORRECT', payload: storedCorrect });
     dispatch({ type: 'SET_INCORRECT', payload: storedIncorrect });
     dispatch({ type: 'INCREMENT_VISITS' });
-  };
+  }, [dispatch]);
 
   useEffect(() => {
     initializeUserData();
