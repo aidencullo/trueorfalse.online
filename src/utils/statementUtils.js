@@ -11,13 +11,19 @@ export async function handleFetchStatement(dispatch) {
   }
 }
 
-export async function fetchAnotherStatement(dispatch) {
-  dispatch({ type: 'SET_LOADING' });
+export async function fetchAnotherStatement(dispatch, currentStatements) {
+  const remainingStatements = currentStatements.slice(1);
   
-  try {
-    const data = await fetchStatement();
-    dispatch({ type: 'FETCH_ANOTHER_STATEMENT', payload: data });
-  } catch (error) {
-    dispatch({ type: 'SET_ERROR' });
+  if (remainingStatements.length === 0) {
+    dispatch({ type: 'SET_LOADING' });
+    
+    try {
+      const data = await fetchStatement();
+      dispatch({ type: 'FETCH_ANOTHER_STATEMENT', payload: data });
+    } catch (error) {
+      dispatch({ type: 'SET_ERROR' });
+    }
+  } else {
+    dispatch({ type: 'REMOVE_FIRST_STATEMENT' });
   }
 } 

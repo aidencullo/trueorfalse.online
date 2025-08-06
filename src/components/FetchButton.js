@@ -3,14 +3,14 @@ import { useStatementContext } from '../context/StatementContext';
 import { fetchAnotherStatement } from '../utils/statementUtils';
 
 function FetchButton({ userAnswer }) {
-  const { dispatch } = useStatementContext();
+  const { state, dispatch } = useStatementContext();
 
   if (userAnswer === null) {
     return null;
   }
 
   const handleClick = () => {
-    fetchAnotherStatement(dispatch);
+    fetchAnotherStatement(dispatch, state.statements);
   };
 
   return (
