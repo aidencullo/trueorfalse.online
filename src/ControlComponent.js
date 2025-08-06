@@ -19,7 +19,7 @@ function ControlComponent() {
       case 'error':
         return <ErrorComponent />;
       case 'quote':
-        return <QuoteComponent text={state.statement} answer={state.answer} />;
+        return <QuoteComponent text={state.statement} answer={state.answer} onFetch={() => handleFetchStatement(dispatch)} />;
       default:
         return <LoadingComponent />;
     }
@@ -28,12 +28,6 @@ function ControlComponent() {
   return (
     <div>
       {renderComponent()}
-      <button 
-        className="fetch-button" 
-        onClick={() => handleFetchStatement(dispatch)}
-      >
-        Fetch Statement
-      </button>
     </div>
   );
 }

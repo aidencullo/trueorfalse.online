@@ -105,6 +105,21 @@
   color: white;
 }
 
+/* Incorrect counter styles */
+.incorrect-counter {
+  padding: 0.5rem 1rem;
+  background-color: rgba(231, 76, 60, 0.2);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+}
+
+.incorrect-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
 /* Fetch button styles */
 .fetch-button {
   margin-top: 2rem;
