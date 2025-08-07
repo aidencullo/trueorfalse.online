@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStatementContext } from '../context/StatementContext';
-import { fetchAnotherStatement } from '../utils/statementUtils';
+import { handleFetchAnotherStatement } from '../utils/statementUtils';
 
-function FetchButton({ userAnswer }) {
+function FetchButton({ userAnswer, resetUserAnswer }) {
   const { state, dispatch } = useStatementContext();
 
   if (userAnswer === null) {
@@ -10,7 +10,8 @@ function FetchButton({ userAnswer }) {
   }
 
   const handleClick = () => {
-    fetchAnotherStatement(dispatch, state.statements);
+    handleFetchAnotherStatement(dispatch, state.statements);
+    resetUserAnswer();
   };
 
   return (

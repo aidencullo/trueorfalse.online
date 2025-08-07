@@ -13,12 +13,16 @@ function QuoteComponent({ text, answer }) {
     setUserAnswer(userAnswer);
   }
 
+  function resetUserAnswer() {
+    setUserAnswer(null);
+  }
+
   return (
     <div>
       <QuoteDisplay text={text} />
       <ButtonContainer onAnswer={onAnswer} userAnswer={userAnswer} />
       <SolutionComponent userAnswer={userAnswer} correctAnswer={answer} />
-      <FetchButton userAnswer={userAnswer} />
+      <FetchButton userAnswer={userAnswer} resetUserAnswer={resetUserAnswer} />
     </div>
   );
 }

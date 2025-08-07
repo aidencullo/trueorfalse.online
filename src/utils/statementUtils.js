@@ -11,7 +11,7 @@ export async function handleFetchStatement(dispatch) {
   }
 }
 
-export async function fetchAnotherStatement(dispatch, currentStatements) {
+export async function handleFetchAnotherStatement(dispatch, currentStatements) {
   const remainingStatements = currentStatements.slice(1);
   
   if (remainingStatements.length === 0) {
