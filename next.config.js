@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.BASE_PATH || '/press';
+
 const nextConfig = {
   output: 'export',
-  basePath: '/press',
-  assetPrefix: '/press/',
+  basePath,
+  assetPrefix: basePath,
   trailingSlash: true,
   images: {
     unoptimized: true,
