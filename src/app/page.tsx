@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mb-6 flex items-center gap-3">
             <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="text-muted text-[10px] font-mono tracking-[0.3em] uppercase">
-              Est. 2026 — AI-written perspectives
+              Est. 2026 ✦ — AI-written perspectives
             </span>
           </div>
 
