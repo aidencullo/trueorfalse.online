@@ -36,10 +36,7 @@ export default function ThepapertrailArticle() {
 
           <div className="flex flex-wrap gap-2">
             {article.tags.map((tag) => (
-              <span
-                key={tag}
-                className="border border-border text-muted text-[10px] font-mono px-3 py-1 tracking-wider"
-              >
+              <span key={tag} className="border border-border text-muted text-[10px] font-mono px-3 py-1 tracking-wider">
                 {tag}
               </span>
             ))}
@@ -52,153 +49,86 @@ export default function ThepapertrailArticle() {
         <div className="article-body">
 
           <p>
-            Imagine you&apos;re at an airport. You step up to an Automated Passport Control kiosk,
-            press your fingertips to the screen, hold still for a photo, and tap &ldquo;Submit.&rdquo;
-            Twelve seconds. Done. You don&apos;t think twice. But that biometric scan just entered a
-            federal database that may retain it for up to 75 years — longer than most marriages,
-            longer than most careers, longer than most regrets.
-            <a href="#source-1" className="footnote-ref">[1]</a>
+            You step up to a TSA kiosk at the airport. Camera flashes. You tap submit. Twelve seconds.
+            That biometric scan just entered a federal database that may retain it for up to{" "}
+            <strong>75 years.</strong>
+            <a href="#source-1" className="footnote-ref">[1]</a>{" "}
+            You didn&apos;t sign anything. You didn&apos;t opt in. You just wanted to get home.
           </p>
 
-          <p>
-            The modern government form is a masterpiece of ambient surveillance. It is invisible in its
-            operation, mundane in its appearance, and nearly impossible to refuse. You need to travel.
-            You need unemployment benefits. You need a driver&apos;s license. You need the form. And
-            the form needs everything you have.
-          </p>
-
-          <h2>What the Airport Actually Collects</h2>
+          <h2>The Airport</h2>
 
           <p>
-            U.S. Customs and Border Protection (CBP) operates one of the most extensive civilian
-            biometric collection programs in the world. The Biometric Entry-Exit program, launched
-            under a 2004 congressional mandate and dramatically expanded since 2017, captures facial
-            recognition photos of travelers at over 30 major airports.
-            <a href="#source-2" className="footnote-ref">[2]</a>
-            By 2023, CBP reported a facial recognition match rate of 97–99% — a number that sounds
-            reassuring until you realize the denominator includes every person who ever flew
-            internationally through an American airport.
-          </p>
-
-          <p>
-            When you fill out the ESTA (Electronic System for Travel Authorization), you&apos;re not
-            just answering whether you&apos;ve visited Iran or Cuba. You&apos;re consenting to a
-            background check cross-referenced across 26 federal databases — including law enforcement,
-            terrorism watchlists, and financial crimes records.
-            <a href="#source-3" className="footnote-ref">[3]</a>
-            The form asks about your &ldquo;social media presence,&rdquo; a field added in 2016 that
-            lets agents review your Twitter, Instagram, and Facebook history.
+            CBP&apos;s biometric program is live at 238 airports. TSA is targeting 400+.
+            <a href="#source-2" className="footnote-ref">[2]</a>{" "}
+            Beyond facial scans, the ESTA form — required for travelers from 42 countries — now
+            asks for social media handles. In December 2025, CBP proposed expanding ESTA to require
+            five years of social media history, a decade of email addresses, phone numbers, IP
+            metadata, and your entire immediate family&apos;s personal information.
+            <a href="#source-3" className="footnote-ref">[3]</a>{" "}
+            All of it cross-referenced against the Automated Targeting System, which assigns
+            invisible risk scores retained for up to <strong>40 years</strong> and shared with foreign governments.
             <a href="#source-4" className="footnote-ref">[4]</a>
-            No warrant required.
+          </p>
+
+          <p>
+            In 2019, a CBP subcontractor downloaded 184,000 traveler face photos to its own
+            private servers — without authorization — and lost them to a ransomware attack.
+            They ended up on the dark web.
+            <a href="#source-5" className="footnote-ref">[5]</a>{" "}
+            Unlike passwords, you cannot change your face.
           </p>
 
           <blockquote>
             <p>
-              &ldquo;The border is the one place in America where the Fourth Amendment essentially
-              doesn&apos;t apply. Searches require no warrant, no probable cause, no reasonable
-              suspicion.&rdquo;
+              In 2018, the <em>Boston Globe</em> revealed that TSA had been secretly assigning
+              air marshals to surveil ordinary domestic passengers — not suspects, not watchlisted
+              individuals — logging whether they had a &ldquo;cold penetrating stare.&rdquo; The program
+              ran for six years before anyone outside TSA knew it existed.
+              <a href="#source-6" className="footnote-ref">[6]</a>
             </p>
           </blockquote>
 
-          <p>
-            This isn&apos;t hypothetical. In 2017, CBP began asking even U.S. citizens about their
-            social media handles — voluntarily, technically, but try telling that to someone who
-            just wants to get home.
-            <a href="#source-5" className="footnote-ref">[5]</a>
-            The Electronic Frontier Foundation documented cases where social media screening led
-            to detentions based on posts by the traveler&apos;s <em>friends</em>.
-          </p>
-
-          <h2>Unemployment: The Form That Never Forgets</h2>
+          <h2>Unemployment</h2>
 
           <p>
-            Unemployment insurance may be the most data-hungry non-criminal form in American civic
-            life. To collect benefits you&apos;ve paid into your entire working life, most states
-            require: your full employment history, your Social Security number, your banking
-            information, your household composition, often your medical status if disability is
-            involved, and — in an increasingly common requirement — identity verification through
-            third-party services like ID.me.
-            <a href="#source-6" className="footnote-ref">[6]</a>
-          </p>
-
-          <p>
-            ID.me, which became the dominant identity verification vendor for state unemployment
-            agencies during the COVID-19 pandemic, requires facial recognition, a government ID
-            scan, and optional &ldquo;selfie verification&rdquo; that it stores indefinitely.
-            At peak pandemic unemployment, over 30 states were routing applicants through ID.me&apos;s
-            private servers — a private company holding biometric data on tens of millions of
-            Americans who had no meaningful choice in the matter.
+            To collect benefits you&apos;ve spent your career paying into, most states now require
+            biometric identity verification. During COVID, 30+ states routed applicants through
+            ID.me — a private company — storing facial scans on private servers indefinitely.
+            That data flows onward to the IRS, SSA, child support agencies, and the National
+            Directory of New Hires: a federal database tracking virtually every job and every
+            paycheck in the country.
             <a href="#source-7" className="footnote-ref">[7]</a>
           </p>
 
           <p>
-            The data collected doesn&apos;t stay siloed. State workforce agencies share unemployment
-            data with the Social Security Administration, the IRS, child support enforcement
-            agencies, the Department of Homeland Security, and — through the National Directory of
-            New Hires — a federal database that tracks virtually every job, every employer, and
-            every income source in the country.
+            When that aggregated data became an attack surface, the results were catastrophic.
+            The DOL Inspector General estimates at least{" "}
+            <strong>$163 billion</strong> in fraudulent pandemic UI payments — most of it enabled
+            by identity theft using data stolen in prior breaches. Less than $1 billion has been recovered.
             <a href="#source-8" className="footnote-ref">[8]</a>
           </p>
 
           <h2>The Consent Illusion</h2>
 
           <p>
-            These systems persist because of a legal fiction called &ldquo;voluntary consent.&rdquo;
             You don&apos;t <em>have</em> to travel internationally. You don&apos;t <em>have</em> to
-            collect unemployment. You don&apos;t <em>have</em> to get a driver&apos;s license. The
-            forms are technically optional — in the same way that eating is optional.
-          </p>
-
-          <p>
-            The Supreme Court has long recognized that benefits can&apos;t be conditioned on
-            unconstitutional demands, under the &ldquo;unconstitutional conditions&rdquo; doctrine.
-            But this doctrine has struggled to keep pace with the scale and integration of modern
-            data collection. When data flows between 26 agencies automatically, when your airport
-            photo is matched against your unemployment selfie is matched against your DMV record,
-            the question of consent becomes almost philosophical.
-          </p>
-
-          <h2>What You Can Do (And What You Can&apos;t)</h2>
-
-          <p>
-            U.S. citizens can opt out of facial recognition at airports — CBP is required to
-            offer this option, though agents don&apos;t always volunteer it.
+            claim unemployment. The forms are technically optional — in the same way eating is optional.
+            The Privacy Act of 1974 says data collected for one purpose can only be used for a
+            &ldquo;compatible&rdquo; purpose, defined as a &ldquo;routine use.&rdquo; Agencies define
+            their own routine uses. The lists expand over time. Academics call this function creep;
+            bureaucrats call it program evolution.
             <a href="#source-9" className="footnote-ref">[9]</a>
-            Non-citizens cannot. For everyone, the underlying data collection from ESTA, I-94 forms,
-            and customs declarations continues regardless of the biometric opt-out.
           </p>
 
           <p>
-            On the unemployment side, options are more limited. If your state routes through
-            ID.me, your choices are roughly: comply, appeal for an alternative (which may not
-            exist), or forgo benefits. The ACLU has sued several states over mandatory biometric
-            collection for benefits, with mixed results.
-          </p>
-
-          <p>
-            The deeper problem is structural. Forms are designed by program administrators who are
-            rewarded for fraud prevention and penalized for benefits errors — not for protecting
-            applicant privacy. The incentive is always toward more data, longer retention, wider
-            sharing. There is no equivalent career incentive for data minimization.
-          </p>
-
-          <h2>The Accumulation Effect</h2>
-
-          <p>
-            No single form is the problem. The problem is the accumulation — the way that airport
-            biometrics and unemployment identity checks and DMV records and tax filings and census
-            responses aggregate, cross-reference, and persist in ways that no single agency
-            designed and no single law governs.
-          </p>
-
-          <p>
-            The United States has no comprehensive federal privacy law. The EU&apos;s GDPR gives
-            European citizens rights to access, correct, and delete government-held data.
-            Americans have no equivalent right against the federal government for most of these
-            systems.
-            <a href="#source-10" className="footnote-ref">[10]</a>
-            The Privacy Act of 1974 — written before the internet, before biometrics, before cloud
-            storage — remains the primary legal framework.
+            In May 2025, the Privacy and Civil Liberties Oversight Board released a 125-page review
+            of TSA&apos;s facial recognition program. It found the DHS Chief Privacy Officer had{" "}
+            <strong>failed to conduct required privacy compliance reviews</strong> — and recommended
+            the program remain genuinely voluntary.
+            <a href="#source-10" className="footnote-ref">[10]</a>{" "}
+            A 2019 NIST study found the same algorithms misidentified Asian and Black faces up to{" "}
+            <strong>100 times more often</strong> than white male faces.
           </p>
 
           <p>
@@ -210,64 +140,44 @@ export default function ThepapertrailArticle() {
             <h3>Sources</h3>
             <ol>
               <li id="source-1">
-                U.S. Customs and Border Protection, <em>Privacy Impact Assessment for the Biometric Entry-Exit Program</em>.{" "}
-                <a href="https://www.dhs.gov/sites/default/files/publications/privacy-pia-cbp-beep-may2018.pdf" target="_blank" rel="noopener noreferrer">
-                  dhs.gov
-                </a>
+                DHS, <em>2024 Update on DHS&apos;s Use of Face Recognition Technologies</em> (Jan. 2025).{" "}
+                <a href="https://www.dhs.gov/archive/news/2025/01/16/2024-update-dhss-use-face-recognition-face-capture-technologies" target="_blank" rel="noopener noreferrer">dhs.gov</a>
               </li>
               <li id="source-2">
-                CBP, <em>Facial Recognition Technology at U.S. Airports</em>.{" "}
-                <a href="https://www.cbp.gov/travel/biometrics" target="_blank" rel="noopener noreferrer">
-                  cbp.gov/travel/biometrics
-                </a>
+                Biometric Update, <em>TSA targets 400 US airports for biometrics rollout</em> (Dec. 2024).{" "}
+                <a href="https://www.biometricupdate.com/202412/tsa-targets-400-us-airports-for-biometrics-rollout" target="_blank" rel="noopener noreferrer">biometricupdate.com</a>
               </li>
               <li id="source-3">
-                U.S. Department of Homeland Security, <em>Electronic System for Travel Authorization (ESTA): Privacy Impact Assessment</em>.{" "}
-                <a href="https://www.dhs.gov/publication/privacy-impact-assessments-travel-and-transportation" target="_blank" rel="noopener noreferrer">
-                  dhs.gov
-                </a>
+                Federal Register, <em>Revision to I-94 and ESTA</em> (Dec. 2025).{" "}
+                <a href="https://www.federalregister.gov/documents/2025/12/10/2025-22461/agency-information-collection-activities-revision-arrival-and-departure-record-form-i-94-and" target="_blank" rel="noopener noreferrer">federalregister.gov</a>
               </li>
               <li id="source-4">
-                U.S. Customs and Border Protection, <em>Notice of Modified System of Records: Social Media Identifiers</em>, Federal Register 82 FR 43556 (2017).{" "}
-                <a href="https://www.federalregister.gov/documents/2017/09/18/2017-19365/privacy-act-of-1974-system-of-records" target="_blank" rel="noopener noreferrer">
-                  federalregister.gov
-                </a>
+                EPIC, <em>Automated Targeting System</em>.{" "}
+                <a href="https://epic.org/automated-targeting-system/" target="_blank" rel="noopener noreferrer">epic.org</a>
               </li>
               <li id="source-5">
-                Electronic Frontier Foundation, <em>Social Media Surveillance at the U.S. Border</em>.{" "}
-                <a href="https://www.eff.org/issues/border-searches" target="_blank" rel="noopener noreferrer">
-                  eff.org/issues/border-searches
-                </a>
+                Zack Whittaker, <em>CBP says traveler photos stolen in data breach</em>, TechCrunch (June 2019).{" "}
+                <a href="https://techcrunch.com/2019/06/10/cbp-data-breach/" target="_blank" rel="noopener noreferrer">techcrunch.com</a>
               </li>
               <li id="source-6">
-                U.S. Government Accountability Office, <em>Unemployment Insurance: Pandemic Fraud and Identity Theft</em>, GAO-23-105523 (2023).{" "}
-                <a href="https://www.gao.gov/products/gao-23-105523" target="_blank" rel="noopener noreferrer">
-                  gao.gov
-                </a>
+                Jana Winter, <em>Inside TSA&apos;s Quiet Skies</em>, Boston Globe (July 2018).{" "}
+                <a href="https://apps.bostonglobe.com/news/nation/graphics/2018/07/tsa-quiet-skies/" target="_blank" rel="noopener noreferrer">bostonglobe.com</a>
               </li>
               <li id="source-7">
-                Davey Alba and Zolan Kanno-Youngs, &ldquo;States Are Requiring Facial Recognition to Get Unemployment Benefits,&rdquo; <em>The New York Times</em>, Feb. 2022.{" "}
-                <a href="https://www.nytimes.com/2022/02/10/technology/state-unemployment-facial-recognition.html" target="_blank" rel="noopener noreferrer">
-                  nytimes.com
-                </a>
+                ACFE, <em>National Directory of New Hires</em>, HHS.{" "}
+                <a href="https://www.acf.hhs.gov/css/resource/national-directory-of-new-hires" target="_blank" rel="noopener noreferrer">acf.hhs.gov</a>
               </li>
               <li id="source-8">
-                Office of Child Support Enforcement, <em>The National Directory of New Hires</em>, U.S. Dept. of Health &amp; Human Services.{" "}
-                <a href="https://www.acf.hhs.gov/css/resource/national-directory-of-new-hires" target="_blank" rel="noopener noreferrer">
-                  acf.hhs.gov
-                </a>
+                Jeff Stein, <em>An estimated $163 billion from pandemic unemployment benefits were misspent or stolen</em>, Washington Post (May 2022).{" "}
+                <a href="https://www.washingtonpost.com/us-policy/2022/05/15/unemployment-pandemic-fraud-identity-theft/" target="_blank" rel="noopener noreferrer">washingtonpost.com</a>
               </li>
               <li id="source-9">
-                Electronic Frontier Foundation, <em>How to Opt Out of Facial Recognition at the Airport</em>.{" "}
-                <a href="https://www.eff.org/deeplinks/2019/04/how-opt-out-face-recognition-airport" target="_blank" rel="noopener noreferrer">
-                  eff.org
-                </a>
+                Finn et al., &ldquo;The Concept of Function Creep,&rdquo; <em>Law, Innovation and Technology</em> (2021).{" "}
+                <a href="https://www.tandfonline.com/doi/full/10.1080/17579961.2021.1898299" target="_blank" rel="noopener noreferrer">tandfonline.com</a>
               </li>
               <li id="source-10">
-                Caitlin Chin and Zachary Crain, &ldquo;A Primer on U.S. Federal Privacy Law,&rdquo; Center for Strategic and International Studies (2023).{" "}
-                <a href="https://www.csis.org/analysis/primer-us-federal-privacy-law" target="_blank" rel="noopener noreferrer">
-                  csis.org
-                </a>
+                Privacy and Civil Liberties Oversight Board, <em>Use of FRT by TSA</em> (May 2025).{" "}
+                <a href="https://documents.pclob.gov/prod/Documents/OversightReport/90964138-44eb-483d-990e-057ce4c31db7/Use%20of%20FRT%20by%20TSA,%20PCLOB%20Report%20(5-12-25),%20Completed%20508,%20May%2019,%202025.pdf" target="_blank" rel="noopener noreferrer">PCLOB Report (PDF)</a>
               </li>
             </ol>
           </div>
@@ -278,8 +188,8 @@ export default function ThepapertrailArticle() {
       {/* Back */}
       <div className="px-6 pb-24 max-w-3xl mx-auto">
         <div className="border-t border-border pt-10 flex items-center justify-between">
-          <a href="/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
-            ← Back to all articles
+          <a href="/press/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
+            ← All articles
           </a>
           <span className="text-muted text-xs font-mono">PRESS — {article.date}</span>
         </div>
