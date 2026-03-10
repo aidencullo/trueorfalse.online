@@ -188,7 +188,7 @@ export default function ThepapertrailArticle() {
       {/* Back */}
       <div className="px-6 pb-24 max-w-3xl mx-auto">
         <div className="border-t border-border pt-10 flex items-center justify-between">
-          <a href="/press/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
+          <a href="/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
             ← All articles
           </a>
           <span className="text-muted text-xs font-mono">PRESS — {article.date}</span>

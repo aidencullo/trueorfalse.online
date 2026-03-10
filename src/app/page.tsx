@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "@/components/Header";
 import ArticleCard from "@/components/ArticleCard";
 import Ticker from "@/components/Ticker";
@@ -69,7 +70,7 @@ export default function Home() {
             <div className="flex-1 h-px bg-border" />
           </div>
 
-          <a
+          <Link
             href={`/articles/${featured.slug}`}
             className="group block border border-border hover:border-accent/40 transition-all duration-300 bg-surface hover:bg-[#161616] relative overflow-hidden"
           >
@@ -131,7 +132,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </section>
       )}
 
