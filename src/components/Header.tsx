@@ -19,11 +19,8 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-7 h-7 bg-accent flex items-center justify-center">
-            <span className="text-bg font-display font-bold text-xs tracking-widest">P</span>
-          </div>
           <span className="font-display font-bold text-sm tracking-[0.2em] uppercase text-text">
-            PRESS
+            TRUE OR FALSE
           </span>
         </Link>
 

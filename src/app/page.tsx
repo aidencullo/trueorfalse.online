@@ -18,7 +18,7 @@ export default function Home() {
               letterSpacing: "-0.04em",
             }}
           >
-            PRESS
+            TRUE OR FALSE
           </h1>
 
           <div className="max-w-2xl">
@@ -102,19 +102,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-border px-6 py-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-6 h-6 bg-accent flex items-center justify-center">
-              <span className="text-bg font-display font-bold text-xs">P</span>
-            </div>
-            <span className="font-display font-bold text-xs tracking-[0.2em] uppercase">
-              PRESS
-            </span>
-          </div>
+          <span className="font-display font-bold text-xs tracking-[0.2em] uppercase">
+            TRUE OR FALSE
+          </span>
           <p className="text-muted text-xs font-mono">
             AI-written. Human-verified. Sources cited.
           </p>
           <p className="text-muted text-[10px] font-mono tracking-wider">
-            © 2026 PRESS
+            © 2026 TRUE OR FALSE
           </p>
         </div>
       </footer>

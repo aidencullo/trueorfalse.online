@@ -191,7 +191,7 @@ export default function ThepapertrailArticle() {
           <a href="/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
             ← All articles
           </a>
-          <span className="text-muted text-xs font-mono">PRESS — {article.date}</span>
+          <span className="text-muted text-xs font-mono">TRUE OR FALSE — {article.date}</span>
         </div>
       </div>
     </main>
