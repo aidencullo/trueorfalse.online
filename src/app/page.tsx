@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import Ticker from "@/components/Ticker";
 import { articles } from "@/data/articles";
 
+const basePath = process.env.BASE_PATH || "";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-bg">
@@ -45,22 +47,14 @@ export default function Home() {
             <Link
               key={article.slug}
               href={`/articles/${article.slug}`}
-              className={`quilt-patch group relative overflow-hidden ${
-                article.span === "large"
-                  ? "quilt-large"
-                  : article.span === "wide"
-                    ? "quilt-wide"
-                    : article.span === "tall"
-                      ? "quilt-tall"
-                      : ""
-              }`}
+              className="quilt-patch group relative overflow-hidden"
             >
               {/* Photo / gradient background */}
               <div
                 className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
                 style={{
                   backgroundImage: article.image
-                    ? `url(${article.image})`
+                    ? `url(${basePath}${article.image})`
                     : article.gradient,
                   backgroundSize: "cover",
                   backgroundPosition: "center",

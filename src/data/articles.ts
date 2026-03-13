@@ -10,7 +10,6 @@ export interface Article {
   featured?: boolean;
   image?: string;
   gradient: string;
-  span?: "wide" | "tall" | "large";
 }
 
 export const articles: Article[] = [
@@ -24,8 +23,8 @@ export const articles: Article[] = [
     excerpt: "From airport kiosks to unemployment offices, routine government forms have become one of the most effective surveillance tools ever built — not because they were designed that way, but because no one asked them not to be.",
     tags: ["Privacy", "Government", "Surveillance", "Data"],
     featured: true,
+    image: "/images/paper-trail.svg",
     gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
-    span: "large",
   },
   {
     slug: "the-machine-knows-your-name",
@@ -36,8 +35,8 @@ export const articles: Article[] = [
     readTime: "8 min",
     excerpt: "Immigration and Customs Enforcement doesn't need a warrant to find you. It needs a contract with a data broker. The agency has spent over $2.8 billion on surveillance technology since 2008 — building a system that monitors the movements of virtually everyone in the country.",
     tags: ["ICE", "Immigration", "Surveillance", "Privacy"],
+    image: "/images/ice-machine.svg",
     gradient: "linear-gradient(135deg, #1a0a0a 0%, #2d1117 40%, #6e1b23 70%, #8b2500 100%)",
-    span: "wide",
   },
   {
     slug: "the-last-free-press",
@@ -48,8 +47,8 @@ export const articles: Article[] = [
     readTime: "7 min",
     excerpt: "The founder of Apple Daily — once Hong Kong's most-read newspaper — has been imprisoned since 2020. His trial under Beijing's National Security Law is the highest-profile press freedom case in the world, and almost nobody is talking about it.",
     tags: ["Press Freedom", "Hong Kong", "Jimmy Lai", "Censorship"],
+    image: "/images/jimmy-lai.svg",
     gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 40%, #2e2e6e 70%, #4a148c 100%)",
-    span: "tall",
   },
   {
     slug: "the-man-who-told-the-truth",
@@ -60,8 +59,8 @@ export const articles: Article[] = [
     readTime: "9 min",
     excerpt: "In 2013, a 29-year-old NSA contractor leaked the most consequential intelligence documents in American history. Twelve years later, the programs he exposed are still running, he's still in exile, and the public has mostly moved on.",
     tags: ["Snowden", "NSA", "Surveillance", "Whistleblowing"],
+    image: "/images/snowden.svg",
     gradient: "linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 40%, #0f460f 70%, #2e7d32 100%)",
-    span: "wide",
   },
 ];
 
