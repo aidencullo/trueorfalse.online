@@ -25,6 +25,8 @@ jobs:
         env:
           BASE_PATH: /press
 
+      - run: touch out/.nojekyll
+
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
