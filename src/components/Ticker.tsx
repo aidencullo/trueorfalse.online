@@ -4,15 +4,15 @@ const items = [
   "PRIVACY",
   "SURVEILLANCE",
   "BIG TECH",
-  "DATA CENTERS",
+  "GOVERNMENT",
   "AI",
-  "GOVERNMENT FORMS",
-  "BROWSERS",
-  "ENERGY",
-  "POWER",
+  "DATA COLLECTION",
   "TRACKING",
-  "INFRASTRUCTURE",
-  "AGENCY",
+  "BIOMETRICS",
+  "CENSORSHIP",
+  "TRANSPARENCY",
+  "FACIAL RECOGNITION",
+  "DIGITAL RIGHTS",
 ];
 
 export default function Ticker() {

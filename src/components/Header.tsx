@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {["Privacy", "Tech", "Power", "Energy"].map((item) => (
+          {["Privacy", "Tech", "Surveillance", "Government"].map((item) => (
             <span
               key={item}
               className="text-muted hover:text-text text-xs font-medium tracking-widest uppercase transition-colors cursor-pointer"
