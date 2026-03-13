@@ -8,6 +8,33 @@
   --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
   --font-inter: 'Inter', system-ui, sans-serif;
   --font-jetbrains-mono: 'JetBrains Mono', monospace;
+
+  /* Dark mode (default) */
+  --color-bg: #0A0A0A;
+  --color-surface: #141414;
+  --color-surface-hover: #161616;
+  --color-surface-alt: #0F0F0F;
+  --color-border: #222222;
+  --color-accent: #CCFF00;
+  --color-accent-dim: #A8D400;
+  --color-text: #F0F0F0;
+  --color-muted: #666666;
+  --color-muted-light: #999999;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #F8F7F2;
+    --color-surface: #EEECEA;
+    --color-surface-hover: #E8E6E1;
+    --color-surface-alt: #E4E2DD;
+    --color-border: #D0CEC8;
+    --color-accent: #3D7A00;
+    --color-accent-dim: #2D5A00;
+    --color-text: #111111;
+    --color-muted: #777777;
+    --color-muted-light: #555555;
+  }
 }
 
 * {
@@ -19,16 +46,16 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
-  color: #F0F0F0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-inter);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #CCFF00;
-  color: #0A0A0A;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /* Custom scrollbar */
@@ -36,14 +63,14 @@ body {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #141414;
+  background: var(--color-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--color-border);
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #CCFF00;
+  background: var(--color-accent);
 }
 
 /* Reading progress */
@@ -52,14 +79,14 @@ body {
   top: 0;
   left: 0;
   height: 2px;
-  background: #CCFF00;
+  background: var(--color-accent);
   z-index: 100;
   transition: width 0.1s ease;
 }
 
 /* Footnote hover */
 .footnote-ref {
-  color: #CCFF00;
+  color: var(--color-accent);
   text-decoration: none;
   font-size: 0.75em;
   vertical-align: super;
@@ -68,7 +95,7 @@ body {
   border-radius: 2px;
 }
 .footnote-ref:hover {
-  background: rgba(204, 255, 0, 0.15);
+  background: color-mix(in srgb, var(--color-accent) 15%, transparent);
 }
 
 /* Article body styles */
@@ -78,46 +105,45 @@ body {
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 2.5rem 0 1rem;
-  color: #F0F0F0;
+  color: var(--color-text);
 }
 
 .article-body h3 {
   font-family: var(--font-space-grotesk);
-  font-size: 1.125rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   margin: 2rem 0 0.75rem;
-  color: #CCFF00;
+  color: var(--color-accent);
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  font-size: 0.8125rem;
 }
 
 .article-body p {
   line-height: 1.8;
-  color: #CCCCCC;
+  color: var(--color-muted-light);
   margin-bottom: 1.5rem;
   font-size: 1.0625rem;
 }
 
 .article-body a {
-  color: #CCFF00;
+  color: var(--color-accent);
   text-decoration: underline;
-  text-decoration-color: rgba(204, 255, 0, 0.3);
+  text-decoration-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s;
 }
 .article-body a:hover {
-  text-decoration-color: #CCFF00;
+  text-decoration-color: var(--color-accent);
 }
 
 .article-body blockquote {
-  border-left: 3px solid #CCFF00;
+  border-left: 3px solid var(--color-accent);
   padding: 0.75rem 1.5rem;
   margin: 2rem 0;
-  background: rgba(204, 255, 0, 0.03);
+  background: color-mix(in srgb, var(--color-accent) 3%, transparent);
 }
 .article-body blockquote p {
-  color: #E0E0E0;
+  color: var(--color-text);
   font-style: italic;
   margin-bottom: 0;
 }
@@ -125,38 +151,38 @@ body {
 .article-body ul, .article-body ol {
   margin: 1.5rem 0;
   padding-left: 1.5rem;
-  color: #CCCCCC;
+  color: var(--color-muted-light);
 }
 .article-body li {
   margin-bottom: 0.5rem;
   line-height: 1.7;
 }
 .article-body ul li::marker {
-  color: #CCFF00;
+  color: var(--color-accent);
 }
 
 .article-body .sources {
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--color-border);
 }
 .article-body .sources h3 {
-  color: #666;
+  color: var(--color-muted);
   margin-bottom: 1rem;
 }
 .article-body .sources ol {
   font-size: 0.875rem;
-  color: #666;
+  color: var(--color-muted);
 }
 .article-body .sources li {
   margin-bottom: 0.75rem;
 }
 .article-body .sources a {
-  color: #888;
+  color: var(--color-muted-light);
   word-break: break-all;
 }
 .article-body .sources a:hover {
-  color: #CCFF00;
+  color: var(--color-accent);
 }
 
 /* Noise texture overlay */

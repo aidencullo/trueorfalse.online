@@ -5,7 +5,7 @@ export default function ArticleCard({ article, index = 0 }: { article: Article; 
   return (
     <Link
       href={`/articles/${article.slug}`}
-      className="group block border border-border hover:border-accent/40 transition-all duration-300 p-6 bg-surface hover:bg-[#161616] relative overflow-hidden"
+      className="group block border border-border hover:border-accent/40 transition-all duration-300 p-6 bg-surface hover:bg-surface-hover relative overflow-hidden"
       style={{ animationDelay: `${index * 80}ms` }}
     >
       {/* accent bar */}

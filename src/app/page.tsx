@@ -19,7 +19,7 @@ export default function Home() {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage:
-              "linear-gradient(#CCFF00 1px, transparent 1px), linear-gradient(90deg, #CCFF00 1px, transparent 1px)",
+              "linear-gradient(var(--color-accent) 1px, transparent 1px), linear-gradient(90deg, var(--color-accent) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
@@ -72,7 +72,7 @@ export default function Home() {
 
           <Link
             href={`/articles/${featured.slug}`}
-            className="group block border border-border hover:border-accent/40 transition-all duration-300 bg-surface hover:bg-[#161616] relative overflow-hidden"
+            className="group block border border-border hover:border-accent/40 transition-all duration-300 bg-surface hover:bg-surface-hover relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-0 h-[2px] bg-accent group-hover:w-full transition-all duration-700" />
 
@@ -105,7 +105,7 @@ export default function Home() {
               </div>
 
               {/* Accent side */}
-              <div className="md:col-span-2 bg-[#0F0F0F] p-10 flex flex-col justify-between min-h-[280px]">
+              <div className="md:col-span-2 bg-surface-alt p-10 flex flex-col justify-between min-h-[280px]">
                 <div>
                   <div className="text-[10px] font-mono tracking-[0.3em] text-muted uppercase mb-4">
                     Topics covered
@@ -153,40 +153,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
-      {/* Coming soon */}
-      <section className="px-6 pb-24 max-w-7xl mx-auto">
-        <div className="flex items-center gap-4 mb-8">
-          <span className="text-muted text-[10px] font-mono tracking-[0.3em] uppercase">
-            Coming soon
-          </span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-4">
-          {[
-            { title: "Chrome & the Browser Wars", subtitle: "How Google's browser became the internet's tollbooth", cat: "Tech" },
-            { title: "The Thirst for Power", subtitle: "Data centers are drinking our aquifers dry", cat: "Energy" },
-            { title: "Signal vs. Noise", subtitle: "Why every app wants to be your news source", cat: "Media" },
-          ].map((item) => (
-            <div
-              key={item.title}
-              className="border border-border p-6 opacity-40 relative overflow-hidden"
-            >
-              <div className="absolute top-4 right-4 text-[9px] font-mono text-muted tracking-widest border border-border px-2 py-0.5">
-                SOON
-              </div>
-              <span className="text-accent text-[10px] font-mono tracking-[0.2em] uppercase block mb-3">
-                {item.cat}
-              </span>
-              <h3 className="font-display font-bold text-lg leading-tight tracking-tight mb-2">
-                {item.title}
-              </h3>
-              <p className="text-muted text-sm">{item.subtitle}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="border-t border-border px-6 py-10">
