@@ -8,6 +8,9 @@ export interface Article {
   excerpt: string;
   tags: string[];
   featured?: boolean;
+  image?: string;
+  gradient: string;
+  span?: "wide" | "tall" | "large";
 }
 
 export const articles: Article[] = [
@@ -21,6 +24,8 @@ export const articles: Article[] = [
     excerpt: "From airport kiosks to unemployment offices, routine government forms have become one of the most effective surveillance tools ever built — not because they were designed that way, but because no one asked them not to be.",
     tags: ["Privacy", "Government", "Surveillance", "Data"],
     featured: true,
+    gradient: "linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%)",
+    span: "large",
   },
 ];
 

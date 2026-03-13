@@ -185,6 +185,57 @@ body {
   color: var(--color-accent);
 }
 
+/* Quilt grid */
+.quilt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 6px;
+}
+
+.quilt-patch {
+  cursor: pointer;
+  min-height: 280px;
+}
+
+.quilt-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.quilt-wide {
+  grid-column: span 2;
+}
+
+.quilt-tall {
+  grid-row: span 2;
+}
+
+/* Single article: fill full width */
+.quilt-grid:has(.quilt-patch:only-child) {
+  grid-template-columns: 1fr;
+  grid-auto-rows: 500px;
+}
+
+.quilt-grid:has(.quilt-patch:only-child) .quilt-large,
+.quilt-grid:has(.quilt-patch:only-child) .quilt-wide {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+  .quilt-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+  }
+  .quilt-large,
+  .quilt-wide,
+  .quilt-tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
 /* Noise texture overlay */
 .noise::after {
   content: '';

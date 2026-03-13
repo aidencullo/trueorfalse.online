@@ -40,7 +40,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-          <span className="text-muted text-xs font-mono tracking-wider">AI-WRITTEN</span>
+          <span className="text-muted text-xs font-mono tracking-wider">AI-WRITTEN, HUMAN-VERIFIED</span>
         </div>
       </div>
     </header>
