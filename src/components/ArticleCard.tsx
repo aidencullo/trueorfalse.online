@@ -20,7 +20,7 @@ export default function ArticleCard({ article, index = 0 }: { article: Article; 
         </span>
       </div>
 
-      <h2 className="font-display font-700 text-xl leading-tight tracking-tight text-text mb-2 group-hover:text-accent transition-colors duration-200">
+      <h2 className="font-display font-bold text-xl leading-tight tracking-tight text-text mb-2 group-hover:text-accent transition-colors duration-200">
         {article.title}
       </h2>
 

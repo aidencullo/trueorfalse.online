@@ -24,7 +24,7 @@ export default function ThepapertrailArticle() {
           </div>
 
           <h1
-            className="font-display font-700 text-text leading-none mb-6"
+            className="font-display font-bold text-text leading-none mb-6"
             style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", letterSpacing: "-0.04em" }}
           >
             {article.title}

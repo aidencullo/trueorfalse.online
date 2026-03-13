@@ -12,6 +12,16 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: "browser-shortcuts",
+    title: "Browser Shortcuts",
+    subtitle: "Ten keyboard shortcuts that make Chrome and Firefox actually fast",
+    category: "Productivity",
+    date: "March 6, 2026",
+    readTime: "3 min",
+    excerpt: "Most people use a browser eight hours a day and never learn ten shortcuts. Here are the ones worth knowing.",
+    tags: ["Productivity", "Browser", "Keyboard", "Tools"],
+  },
+  {
     slug: "the-paper-trail",
     title: "The Paper Trail",
     subtitle: "Every form you fill out is a data point in a system designed to remember forever",

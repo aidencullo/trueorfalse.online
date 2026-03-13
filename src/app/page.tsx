@@ -35,7 +35,7 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="font-display font-700 leading-none tracking-tight mb-6"
+          <h1 className="font-display font-bold leading-none tracking-tight mb-6"
             style={{ fontSize: "clamp(4rem, 12vw, 9rem)", letterSpacing: "-0.04em" }}>
             PRESS
           </h1>
@@ -87,7 +87,7 @@ export default function Home() {
                   <span className="text-muted text-[10px] font-mono">{featured.date}</span>
                 </div>
 
-                <h2 className="font-display font-700 text-text group-hover:text-accent transition-colors duration-200 mb-4"
+                <h2 className="font-display font-bold text-text group-hover:text-accent transition-colors duration-200 mb-4"
                   style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", lineHeight: "1", letterSpacing: "-0.03em" }}>
                   {featured.title}
                 </h2>
@@ -179,7 +179,7 @@ export default function Home() {
               <span className="text-accent text-[10px] font-mono tracking-[0.2em] uppercase block mb-3">
                 {item.cat}
               </span>
-              <h3 className="font-display font-700 text-lg leading-tight tracking-tight mb-2">
+              <h3 className="font-display font-bold text-lg leading-tight tracking-tight mb-2">
                 {item.title}
               </h3>
               <p className="text-muted text-sm">{item.subtitle}</p>
@@ -195,7 +195,7 @@ export default function Home() {
             <div className="w-6 h-6 bg-accent flex items-center justify-center">
               <span className="text-bg font-display font-bold text-xs">P</span>
             </div>
-            <span className="font-display font-700 text-xs tracking-[0.2em] uppercase">PRESS</span>
+            <span className="font-display font-bold text-xs tracking-[0.2em] uppercase">PRESS</span>
           </div>
           <p className="text-muted text-xs font-mono">
             AI-written. Human-prompted. Sources cited.
