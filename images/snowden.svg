@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0A0A0A"/>
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a0a"/>
+      <stop offset="50%" stop-color="#0f460f"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g4)" opacity="0.8"/>
+  <!-- Binary rain -->
+  <g fill="#00FF00" opacity="0.06" font-family="monospace" font-size="14">
+    <text x="50" y="30">01101001</text>
+    <text x="200" y="60">10110100</text>
+    <text x="400" y="40">01001101</text>
+    <text x="600" y="80">11010010</text>
+    <text x="100" y="120">10100110</text>
+    <text x="350" y="150">01101001</text>
+    <text x="550" y="130">10010110</text>
+    <text x="700" y="170">01011010</text>
+    <text x="50" y="220">11001010</text>
+    <text x="250" y="250">01010101</text>
+    <text x="500" y="230">10101010</text>
+    <text x="650" y="270">01100110</text>
+    <text x="150" y="350">10011001</text>
+    <text x="400" y="370">01101001</text>
+    <text x="600" y="340">11010101</text>
+    <text x="50" y="450">01010110</text>
+    <text x="300" y="470">10101001</text>
+    <text x="500" y="490">01011010</text>
+    <text x="700" y="460">10100101</text>
+    <text x="100" y="550">11001100</text>
+    <text x="400" y="570">01010101</text>
+    <text x="650" y="550">10110011</text>
+  </g>
+  <!-- Terminal window -->
+  <g opacity="0.2">
+    <rect x="200" y="200" width="400" height="250" rx="6" fill="#000" stroke="#2e7d32" stroke-width="1"/>
+    <rect x="200" y="200" width="400" height="24" rx="6" fill="#1a1a1a"/>
+    <circle cx="216" cy="212" r="5" fill="#ff5f57"/>
+    <circle cx="232" cy="212" r="5" fill="#febc2e"/>
+    <circle cx="248" cy="212" r="5" fill="#28c840"/>
+  </g>
+  <g fill="#00FF00" opacity="0.15" font-family="monospace" font-size="12">
+    <text x="215" y="248">$ cat /nsa/prism/collection.log</text>
+    <text x="215" y="268">UPSTREAM: active</text>
+    <text x="215" y="288">XKEYSCORE: active</text>
+    <text x="215" y="308">TEMPORA: active</text>
+    <text x="215" y="328">MUSCULAR: active</text>
+    <text x="215" y="358" fill="#CCFF00">$ whistleblow --all</text>
+  </g>
+</svg>
