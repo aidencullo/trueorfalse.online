@@ -1,51 +1,39 @@
-import Header from "@/components/Header";
-import ReadingProgress from "@/components/ReadingProgress";
 import { getArticle } from "@/data/articles";
+import Link from "next/link";
 
-export default function ThepapertrailArticle() {
+export default function ThePaperTrailArticle() {
   const article = getArticle("the-paper-trail")!;
 
   return (
     <main className="min-h-screen bg-bg">
-      <ReadingProgress />
-      <Header />
+      {/* Minimal top bar */}
+      <nav className="px-6 py-6 max-w-3xl mx-auto flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-muted hover:text-text text-sm transition-colors"
+        >
+          ← Back
+        </Link>
+        <span className="text-muted text-xs font-mono">
+          {article.readTime} read
+        </span>
+      </nav>
 
-      {/* Hero */}
-      <section className="pt-28 pb-12 px-6 border-b border-border">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="text-accent text-[10px] font-mono tracking-[0.3em] uppercase font-medium">
-              {article.category}
-            </span>
-            <span className="w-1 h-1 bg-border rounded-full" />
-            <span className="text-muted text-[10px] font-mono">{article.date}</span>
-            <span className="w-1 h-1 bg-border rounded-full" />
-            <span className="text-muted text-[10px] font-mono">{article.readTime} read</span>
-          </div>
+      {/* Title */}
+      <header className="px-6 pt-8 pb-12 max-w-3xl mx-auto">
+        <span className="text-accent text-xs font-mono tracking-widest uppercase block mb-4">
+          {article.category}
+        </span>
+        <h1 className="font-display font-bold text-text leading-tight mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.03em" }}>
+          {article.title}
+        </h1>
+        <p className="text-muted-light text-lg leading-relaxed">
+          {article.subtitle}
+        </p>
+      </header>
 
-          <h1
-            className="font-display font-bold text-text leading-none mb-6"
-            style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)", letterSpacing: "-0.04em" }}
-          >
-            {article.title}
-          </h1>
-
-          <p className="text-muted-light text-xl leading-relaxed mb-8 max-w-2xl">
-            {article.subtitle}
-          </p>
-
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag) => (
-              <span key={tag} className="border border-border text-muted text-[10px] font-mono px-3 py-1 tracking-wider">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Article body */}
-      <article className="px-6 py-14 max-w-3xl mx-auto">
+      {/* Body */}
+      <article className="px-6 pb-20 max-w-3xl mx-auto">
         <div className="article-body">
 
           <p>
@@ -184,16 +172,6 @@ export default function ThepapertrailArticle() {
 
         </div>
       </article>
-
-      {/* Back */}
-      <div className="px-6 pb-24 max-w-3xl mx-auto">
-        <div className="border-t border-border pt-10 flex items-center justify-between">
-          <a href="/" className="text-muted hover:text-accent text-sm font-mono tracking-wider transition-colors flex items-center gap-2">
-            ← All articles
-          </a>
-          <span className="text-muted text-xs font-mono">TRUE OR FALSE — {article.date}</span>
-        </div>
-      </div>
     </main>
   );
 }
