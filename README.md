@@ -1,8 +1,8 @@
 # PRESS
 
-AI-written, human-prompted blog covering technology, privacy, and power. Sharp editorial aesthetic. Sources cited.
+AI-written, human-prompted newspaper covering technology, privacy, and power. Sharp editorial aesthetic. Sources cited.
 
-**Live:** [aidencullo.github.io/press](https://aidencullo.github.io/press/)
+**Live:** [trueorfalse.online](https://trueorfalse.online)
 
 ## Stack
 

@@ -1,8 +1,8 @@
-# PRESS — AI-Written Blog
+# PRESS — AI-Written Newspaper
 
 ## What This Is
 
-A statically-exported Next.js blog site, deployed to GitHub Pages. Articles are AI-written, human-prompted, with cited sources. Aesthetic: editorial + political campaign energy.
+A statically-exported Next.js newspaper site, deployed to GitHub Pages at trueorfalse.online. Articles are AI-written, human-prompted, with cited sources. Aesthetic: editorial + political campaign energy.
 
 ## Stack
 
