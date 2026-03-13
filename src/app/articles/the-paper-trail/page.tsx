@@ -1,29 +1,22 @@
 import { getArticle } from "@/data/articles";
 import Link from "next/link";
+import Comments from "@/components/Comments";
 
 export default function ThePaperTrailArticle() {
   const article = getArticle("the-paper-trail")!;
 
   return (
     <main className="min-h-screen bg-bg">
-      {/* Minimal top bar */}
-      <nav className="px-6 py-6 max-w-3xl mx-auto flex items-center justify-between">
+      <nav className="px-6 py-6 max-w-3xl mx-auto">
         <Link
           href="/"
-          className="text-muted hover:text-text text-sm transition-colors"
+          className="text-muted hover:text-text text-lg transition-colors"
         >
-          ← Back
+          ←
         </Link>
-        <span className="text-muted text-xs font-mono">
-          {article.readTime} read
-        </span>
       </nav>
 
-      {/* Title */}
       <header className="px-6 pt-8 pb-12 max-w-3xl mx-auto">
-        <span className="text-accent text-xs font-mono tracking-widest uppercase block mb-4">
-          {article.category}
-        </span>
         <h1 className="font-display font-bold text-text leading-tight mb-4" style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", letterSpacing: "-0.03em" }}>
           {article.title}
         </h1>
@@ -169,6 +162,8 @@ export default function ThePaperTrailArticle() {
               </li>
             </ol>
           </div>
+
+          <Comments />
 
         </div>
       </article>

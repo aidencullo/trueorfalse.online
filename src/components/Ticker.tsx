@@ -13,6 +13,9 @@ const items = [
   "TRANSPARENCY",
   "FACIAL RECOGNITION",
   "DIGITAL RIGHTS",
+  "ICE",
+  "JIMMY LAI",
+  "SNOWDEN",
 ];
 
 export default function Ticker() {

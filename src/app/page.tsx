@@ -32,8 +32,6 @@ export default function Home() {
             <span>AI-WRITTEN</span>
             <span className="w-px h-4 bg-border" />
             <span>HUMAN-VERIFIED</span>
-            <span className="w-px h-4 bg-border" />
-            <span>SOURCES CITED</span>
           </div>
         </div>
       </section>
