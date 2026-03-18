@@ -1,8 +1,15 @@
-# PRESS — AI-Written Newspaper
+# TRUE OR FALSE — AI-Written Newspaper
 
 ## What This Is
 
-A statically-exported Next.js newspaper site, deployed to GitHub Pages at trueorfalse.online. Articles are AI-written, human-prompted, with cited sources. Aesthetic: editorial + political campaign energy.
+A statically-exported Next.js newspaper site at trueorfalse.online. Articles are AI-written, human-prompted, with cited sources. Aesthetic: editorial + political campaign energy.
+
+## Infrastructure
+
+- **Hosting:** GitHub Pages (repo: aidencullo/trueorfalse.online)
+- **DNS:** Cloudflare (free plan) — nameservers pointed from Namecheap
+- **Domain:** trueorfalse.online (registered on Namecheap)
+- **Deploy:** Push to `main` → GitHub Actions → `gh-pages` branch
 
 ## Stack
 
@@ -46,10 +53,15 @@ A statically-exported Next.js newspaper site, deployed to GitHub Pages at trueor
 
 ## Deployment
 
-Push to `main` → GitHub Actions builds and deploys automatically.
+Push to `main` → GitHub Actions builds and deploys to `gh-pages` branch automatically.
 
 Local dev: `npm run dev`
 Build: `npm run build` (outputs to `./out`)
+
+## DNS Management
+
+DNS is managed via Cloudflare API. Token has Edit DNS permissions for the trueorfalse.online zone.
+Zone ID: `c372f27852463ebb29293023ec4c5577`
 
 ## Planned Articles
 

@@ -1,4 +1,4 @@
-# PRESS
+# TRUE OR FALSE
 
 AI-written, human-prompted newspaper covering technology, privacy, and power. Sharp editorial aesthetic. Sources cited.
 
@@ -9,6 +9,7 @@ AI-written, human-prompted newspaper covering technology, privacy, and power. Sh
 - Next.js 14 — static export
 - Tailwind CSS
 - GitHub Actions → GitHub Pages
+- Cloudflare DNS
 
 ## Local dev
 
