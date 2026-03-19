@@ -22,8 +22,6 @@ jobs:
       - run: npm ci
 
       - run: npm run build
-        env:
-          BASE_PATH: "/trueorfalse.online"
 
       - run: touch out/.nojekyll
 
