@@ -63,6 +63,17 @@ export const articles: Article[] = [
     gradient: "linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 40%, #0f460f 70%, #2e7d32 100%)",
   },
   {
+    slug: "the-algorithm-at-the-border",
+    title: "The Algorithm at the Border",
+    subtitle: "ICE doesn\u2019t need a warrant to find you. It needs a purchase order and a Palantir login.",
+    category: "Immigration",
+    date: "March 23, 2026",
+    readTime: "9 min",
+    excerpt: "Palantir dashboards, cell phone location brokers, social media scrapers, and the commercial data pipelines that make sanctuary cities a legal fiction. How ICE built a deportation machine that tracks everyone \u2014 citizen or not \u2014 without ever needing a warrant.",
+    tags: ["ICE", "Immigration", "Palantir", "Surveillance", "AI"],
+    gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 40%, #3d0a5e 70%, #6a0dad 100%)",
+  },
+  {
     slug: "the-right-you-dont-have",
     title: "The Right You Don\u2019t Have",
     subtitle: "Latin America has comprehensive digital privacy laws. The United States still doesn\u2019t.",
