@@ -1,6 +1,6 @@
 import { getArticle } from "@/data/articles";
 import Link from "next/link";
-import Comments from "@/components/Comments";
+
 
 export default function TheLastFreePressArticle() {
   const article = getArticle("the-last-free-press")!;
@@ -172,8 +172,6 @@ export default function TheLastFreePressArticle() {
               </li>
             </ol>
           </div>
-
-          <Comments />
 
         </div>
       </article>

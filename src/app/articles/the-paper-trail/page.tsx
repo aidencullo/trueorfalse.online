@@ -1,6 +1,6 @@
 import { getArticle } from "@/data/articles";
 import Link from "next/link";
-import Comments from "@/components/Comments";
+
 
 export default function ThePaperTrailArticle() {
   const article = getArticle("the-paper-trail")!;
@@ -162,8 +162,6 @@ export default function ThePaperTrailArticle() {
               </li>
             </ol>
           </div>
-
-          <Comments />
 
         </div>
       </article>

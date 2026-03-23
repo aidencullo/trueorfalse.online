@@ -1,6 +1,6 @@
 import { getArticle } from "@/data/articles";
 import Link from "next/link";
-import Comments from "@/components/Comments";
+
 
 export default function TheMachineKnowsYourNameArticle() {
   const article = getArticle("the-machine-knows-your-name")!;
@@ -165,8 +165,6 @@ export default function TheMachineKnowsYourNameArticle() {
               </li>
             </ol>
           </div>
-
-          <Comments />
 
         </div>
       </article>

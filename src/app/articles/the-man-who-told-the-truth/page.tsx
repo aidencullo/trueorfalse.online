@@ -1,6 +1,6 @@
 import { getArticle } from "@/data/articles";
 import Link from "next/link";
-import Comments from "@/components/Comments";
+
 
 export default function TheManWhoToldTheTruthArticle() {
   const article = getArticle("the-man-who-told-the-truth")!;
@@ -185,8 +185,6 @@ export default function TheManWhoToldTheTruthArticle() {
               </li>
             </ol>
           </div>
-
-          <Comments />
 
         </div>
       </article>
