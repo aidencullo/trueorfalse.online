@@ -84,6 +84,18 @@ export const articles: Article[] = [
     tags: ["Privacy", "Latin America", "LGPD", "Data Protection"],
     gradient: "linear-gradient(135deg, #0a0a1a 0%, #0f1a3e 40%, #1a3a6e 70%, #0d47a1 100%)",
   },
+  {
+    slug: "print-the-truth-go-to-prison",
+    title: "Print the Truth, Go to Prison",
+    subtitle: "Jimmy Lai published a newspaper that criticized Beijing. Now he faces life behind bars.",
+    category: "Press Freedom",
+    date: "March 23, 2026",
+    readTime: "9 min",
+    excerpt: "Hong Kong\u2019s highest-profile national security trial ended with a guilty verdict for the founder of Apple Daily. His prosecution \u2014 built on tweets, interviews, and editorials \u2014 is a blueprint for silencing the press worldwide.",
+    tags: ["Press Freedom", "Hong Kong", "Jimmy Lai", "National Security Law", "Censorship"],
+    image: "/images/print-truth.svg",
+    gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 40%, #3e1a1a 70%, #6e2323 100%)",
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
