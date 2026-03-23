@@ -62,6 +62,17 @@ export const articles: Article[] = [
     image: "/images/snowden.svg",
     gradient: "linear-gradient(135deg, #0a1a0a 0%, #1a2e1a 40%, #0f460f 70%, #2e7d32 100%)",
   },
+  {
+    slug: "the-right-you-dont-have",
+    title: "The Right You Don\u2019t Have",
+    subtitle: "Latin America has comprehensive digital privacy laws. The United States still doesn\u2019t.",
+    category: "Privacy",
+    date: "March 23, 2026",
+    readTime: "9 min",
+    excerpt: "Brazil, Argentina, and Mexico built federal privacy frameworks while the US couldn\u2019t pass a single bill. The country that invented the internet has no law protecting the data of the people who use it.",
+    tags: ["Privacy", "Latin America", "LGPD", "Data Protection"],
+    gradient: "linear-gradient(135deg, #0a0a1a 0%, #0f1a3e 40%, #1a3a6e 70%, #0d47a1 100%)",
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
