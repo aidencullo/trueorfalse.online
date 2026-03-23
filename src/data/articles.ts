@@ -96,6 +96,28 @@ export const articles: Article[] = [
     image: "/images/print-truth.svg",
     gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 40%, #3e1a1a 70%, #6e2323 100%)",
   },
+  {
+    slug: "the-nonprofit-that-ate-the-world",
+    title: "The Nonprofit That Ate the World",
+    subtitle: "OpenAI promised to build AGI for humanity. Then it built a $150 billion company for shareholders.",
+    category: "AI",
+    date: "March 23, 2026",
+    readTime: "9 min",
+    excerpt: "Founded as a nonprofit research lab to ensure artificial general intelligence benefits all of humanity, OpenAI has become a closed-source, for-profit company valued at over $150 billion \u2014 its safety team gutted, its charter abandoned, its future controlled by Microsoft and venture capital.",
+    tags: ["AI", "OpenAI", "Corporate Power", "Technology"],
+    gradient: "linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 40%, #3e1a3e 70%, #6a1b9a 100%)",
+  },
+  {
+    slug: "twelve-years-in-the-cold",
+    title: "Twelve Years in the Cold",
+    subtitle: "Edward Snowden exposed the surveillance state and it swallowed him whole",
+    category: "Surveillance",
+    date: "March 23, 2026",
+    readTime: "10 min",
+    excerpt: "Twelve years after the biggest intelligence leak in American history, the programs Snowden exposed are still running \u2014 legalized, expanded, and privatized. The whistleblower is a Russian citizen raising his children in Moscow. The country he tried to warn has moved on.",
+    tags: ["Snowden", "NSA", "Surveillance", "Section 702", "Russia"],
+    gradient: "linear-gradient(135deg, #0a0f1a 0%, #1a1a2e 40%, #2e1a3e 70%, #4a1a6e 100%)",
+  },
 ];
 
 export function getArticle(slug: string): Article | undefined {
